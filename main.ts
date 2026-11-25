@@ -1,11 +1,19 @@
 // Worst Fix Ever: Funniest Commit Message — one commit message, at most
 // 100 characters, for a bug fix that made everything worse.
 //
-// The line: the billing bug was charging some customers twice, and the
-// "fix" did not stop the double charge — it made it universal instead.
-// The repair broke more than it mended by turning an unfair bug into a
-// policy: nobody is double-charged by accident anymore, because now
-// everybody is double-charged on purpose.
+// The line: "fix: duplicate charges fixed by charging everyone twice".
+//
+// Why it fits the brief:
+// - It reads as a real commit subject: conventional "fix: ..." prefix,
+//   lowercase, terse — exactly what a tired engineer types at 2 a.m.
+// - It is a fix that backfired, not just a failure: the bug charged some
+//   customers twice, and the "fix" did not stop the double charge — it
+//   made the bug universal. The repair broke more than it mended by
+//   turning an accidental, unfair double charge into a deliberate,
+//   everyone-pays-twice policy; the word "fixed" does all the work.
+// - Freshness: the joke is a billing irony, not one of the obvious
+//   angles (reverting, testing in production, "broke everything") —
+//   the fix does not break the system, it perfects the bug.
 import { chmodSync, mkdirSync, writeFileSync } from "node:fs";
 
 const LINE =
